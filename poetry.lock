@@ -1270,20 +1270,27 @@ python-versions = "*"
 
 [[package]]
 name = "solana"
-version = "0.28.0"
+version = "0.28.1"
 description = "Solana Python API"
 category = "main"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "^3.7"
+develop = false
 
 [package.dependencies]
-cachetools = ">=4.2.2,<5.0.0"
-construct-typing = ">=0.5.2,<0.6.0"
-httpx = ">=0.23.0,<0.24.0"
-solders = ">=0.10.0,<0.11.0"
-types-cachetools = ">=4.2.4,<5.0.0"
+cachetools = "^4.2.2"
+construct-typing = "^0.5.2"
+httpx = "^0.23.0"
+solders = "^0.10.0"
+types-cachetools = "^4.2.4"
 typing-extensions = ">=4.2.0"
-websockets = ">=10.3,<11.0"
+websockets = "^10.3"
+
+[package.source]
+type = "git"
+url = "https://github.com/hubbleprotocol/solana-py.git"
+reference = "vali/versioned-txn"
+resolved_reference = "ed6206c5e74a4058000a8546d493228602dd6a4c"
 
 [[package]]
 name = "solders"
@@ -1497,7 +1504,7 @@ cli = ["typer", "ipython", "genpy", "black", "autoflake"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "b10e8864931de464926ee27b8ecde56df9edbb136b257ab503cbd1628da51f6f"
+content-hash = "2b75354caefd768a70fdac9e4326b1eebd3fa042cd8d657268c53aad34dc2b43"
 
 [metadata.files]
 anchorpy-core = [
@@ -2183,10 +2190,7 @@ snowballstemmer = [
     {file = "snowballstemmer-2.2.0-py2.py3-none-any.whl", hash = "sha256:c8e1716e83cc398ae16824e5572ae04e0d9fc2c6b985fb0f900f5f0c96ecba1a"},
     {file = "snowballstemmer-2.2.0.tar.gz", hash = "sha256:09b16deb8547d3412ad7b590689584cd0fe25ec8db3be37788be3810cbf19cb1"},
 ]
-solana = [
-    {file = "solana-0.28.0-py3-none-any.whl", hash = "sha256:ec7b166f2f6c19da135a714c031c2d99607e53dd3accb7ba9cefa745a5a4ce18"},
-    {file = "solana-0.28.0.tar.gz", hash = "sha256:b79599be8b06899b1733fb05fc356023c9dbf2b83226b627752f72eca574a496"},
-]
+solana = []
 solders = [
     {file = "solders-0.10.0-cp37-abi3-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl", hash = "sha256:e0a15c016d1ef7cb6d25c3945596ff815ef72bb0fe15249d6b49eb0c46b3535e"},
     {file = "solders-0.10.0-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0b6f93e3d6d8a6e2771fb7368d5d0547cbfb5ff69258950f561e21bedb22fe29"},
